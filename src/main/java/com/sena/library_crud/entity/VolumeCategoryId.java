@@ -13,8 +13,8 @@ import lombok.AllArgsConstructor;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookCategoryId implements Serializable {
+public class VolumeCategoryId implements Serializable {
     
-    private Long bookId;
+    private Long volumeId;
     private Long categoryId;
 }

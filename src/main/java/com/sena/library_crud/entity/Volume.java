@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "Voluenes")
+@Table(name = "Volumes")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -37,9 +37,11 @@ public class Volume extends BaseEntity {
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
-    @OneToMany(mappedBy = "Volumen", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<BookAuthor> bookAuthors = new HashSet<>();
+    @OneToMany(mappedBy = "volume", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<VolumeAuthor> volumeAuthors = new HashSet<>();
 
-    @OneToMany(mappedBy = "Volumen", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<BookCategory> bookCategories = new HashSet<>();
+    @OneToMany(mappedBy = "volumen", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<VolumeCategory> volumeCategories = new HashSet<>();
+
+
 }

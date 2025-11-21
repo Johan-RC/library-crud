@@ -21,7 +21,7 @@ import java.time.LocalDate;
 import com.sena.library_crud.enums.ReservationStatus;
 
 @Entity
-@Table(name = "reservations")
+@Table(name = "Reservations")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -47,6 +47,6 @@ public class Reservation {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "book_id", nullable = false)
+    @JoinColumn(name = "volume_id", nullable = false)
     private Volume volume;
 }

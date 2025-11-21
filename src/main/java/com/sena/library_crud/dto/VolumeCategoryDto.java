@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BookCategoryDto {
-    private Long bookId;
+public class VolumeCategoryDto {
+    private Long volumeId;
     private Long categoryId;
 }

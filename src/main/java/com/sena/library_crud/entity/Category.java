@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "Categories")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,5 +30,5 @@ public class Category extends BaseEntity {
     private String description;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<BookCategory> bookCategories = new HashSet<>();
+    private Set<VolumeCategory> volumeCategories = new HashSet<>();
 }

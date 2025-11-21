@@ -15,19 +15,19 @@ import lombok.AllArgsConstructor;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "book_author")
+@Table(name = "Volume_author")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookAuthor {
+public class VolumeAuthor {
 
     @EmbeddedId
-    private BookAuthorId id = new BookAuthorId();
+    private VolumeAuthorId id = new VolumeAuthorId();
 
     @ManyToOne
-    @MapsId("bookId")
-    @JoinColumn(name = "book_id")
+    @MapsId("volumeId")
+    @JoinColumn(name = "volume_id")
     private Volume volume;
 
     @ManyToOne

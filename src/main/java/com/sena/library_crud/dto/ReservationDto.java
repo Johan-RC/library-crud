@@ -14,5 +14,5 @@ public class ReservationDto {
     private LocalDate expirationDate;
     private ReservationStatus status;
     private Long userId;
-    private Long bookId;
+    private Long volumeId;
 }

@@ -21,7 +21,7 @@ import java.time.LocalDate;
 import com.sena.library_crud.enums.LoanStatus;
 
 @Entity
-@Table(name = "loans")
+@Table(name = "Loans")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -49,6 +49,6 @@ public class Loan {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "book_id", nullable = false)
+    @JoinColumn(name = "Volume_id", nullable = false)
     private Volume volume;
 }
