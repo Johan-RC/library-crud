@@ -1,0 +1,21 @@
+package com.sena.library_crud.dto;
+
+import com.fasterxml.jackson.annotation.JsonView;
+import com.sena.library_crud.view.Views;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class AuthorDto {
+
+    @JsonView(Views.Public.class)
+    private Long id;
+
+    @JsonView(Views.Public.class)
+    private String fullName;
+
+    @JsonView(Views.Detailed.class)
+    private String nationality;
+}
